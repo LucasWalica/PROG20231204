@@ -6,7 +6,7 @@ import java.util.Scanner;
 /*
 
 3
-Pepe - 9.0; 8.0; 7.0
+Pepe - 9; 8; 7
 Pepín -    5  ; 4;  3
 Pepón-5;4;3
 
@@ -16,7 +16,8 @@ public class Ejercicio3 {
 
 	public static void main(String[] args) {
 		try (Scanner s = new Scanner(System.in)) {
-			s.useDelimiter("\\s*|\\s*-\\s*|\\s*;\\s*");
+//			s.useDelimiter("\\s+|\\s*-\\s*|\\s*;\\s*"); // no funciona debido al orden en el que se han escrito las alternativas
+			s.useDelimiter("\\s*-\\s*|\\s*;\\s*|\\s+");
 			int n = s.nextInt();
 			String [] nombres = new String[n];
 			float [][] notas = new float[n][3];
